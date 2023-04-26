@@ -9,7 +9,7 @@ public class Pelicula {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id_pelicula")
-    private int Id_pelicula;
+    private int IdPelicula;
     @Column(name = "Titulo")
     private String Titulo;
     @Column(name = "Directores")
@@ -28,11 +28,11 @@ public class Pelicula {
     private int Estado;
 
     public int getIdPelicula() {
-        return Id_pelicula;
+        return IdPelicula;
     }
 
-    public void setId_pelicula(int id_pelicula) {
-        Id_pelicula = id_pelicula;
+    public void setIdPelicula(int IdPelicula) {
+        IdPelicula = IdPelicula;
     }
 
     public String getTitulo() {
