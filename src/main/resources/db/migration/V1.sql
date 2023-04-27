@@ -219,9 +219,9 @@ CREATE TABLE `usuarios` (
                             `DNI` int(11) DEFAULT NULL,
                             `Direccion` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
                             `Ciudad` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-                            `CódigoPostal` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
-                            `FechaAlta` datetime DEFAULT NULL,
-                            `TipoUsuario` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+                            `Codigo_postal` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
+                            `Fecha_alta` datetime DEFAULT NULL,
+                            `Tipo_usuario` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci DEFAULT NULL,
                             `Estado` int(11) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -229,7 +229,7 @@ CREATE TABLE `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`Id_usuario`, `Usuario`, `Password`, `Nombre`, `Apellido`, `DNI`, `Direccion`, `Ciudad`, `CódigoPostal`, `FechaAlta`, `TipoUsuario`, `Estado`) VALUES
+INSERT INTO `usuarios` (`Id_usuario`, `Usuario`, `Password`, `Nombre`, `Apellido`, `DNI`, `Direccion`, `Ciudad`, `Codigo_postal`, `Fecha_alta`, `Tipo_usuario`, `Estado`) VALUES
                                                                                                                                                                            (1, 'usuario1', 'contraseña123', 'Juan', 'Pérez', 12345678, 'Calle Falsa 123', 'Buenos Aires', '1234', '2023-04-25 00:00:00', 'Cliente', 1),
                                                                                                                                                                            (2, 'usuario2', 'contraseña456', 'María', 'González', 23456789, 'Calle Falsa 456', 'Córdoba', '5678', '2023-04-25 00:00:00', 'Cliente', 1),
                                                                                                                                                                            (3, 'usuario3', 'contraseña789', 'Pedro', 'Rodríguez', 34567890, 'Calle Falsa 789', 'Rosario', '9012', '2023-04-25 00:00:00', 'Cliente', 1),
