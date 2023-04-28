@@ -15,6 +15,7 @@ import java.util.List;
 
 @RequestMapping("CRUDRepo")
 @RestController
+@CrossOrigin("*")
 public class Controlador {
 
     private final PSIMPL psimpl;
