@@ -1,7 +1,6 @@
 package com.cinema.cine.Service;
 
 import com.cinema.cine.Entity.Pelicula;
-
 import java.util.List;
 
 public interface PeliculaService {

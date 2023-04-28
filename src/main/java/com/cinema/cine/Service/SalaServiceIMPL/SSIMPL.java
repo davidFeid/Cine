@@ -1,4 +1,4 @@
-package com.cinema.cine.Service.ListaServiceIMPL;
+package com.cinema.cine.Service.SalaServiceIMPL;
 
 import com.cinema.cine.Entity.Sala;
 import com.cinema.cine.Repository.SalaRepo;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class LSIMPL implements SalaService {
+public class SSIMPL implements SalaService {
 
     @Autowired
     private SalaRepo repo;
@@ -30,5 +30,5 @@ public class LSIMPL implements SalaService {
     public Sala BuscarSala(int id) { return this.repo.findById(id).get(); }
 
     @Override
-    public void ElimnarSala(int id) { this.repo.deleteById(id); }
+    public void EliminarSala(int id) { this.repo.deleteById(id); }
 }

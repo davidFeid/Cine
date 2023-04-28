@@ -14,7 +14,7 @@ public interface SalaService {
 
     public Sala BuscarSala(int id);
 
-    public void ElimnarSala(int id);
+    public void EliminarSala(int id);
 
 
 }
