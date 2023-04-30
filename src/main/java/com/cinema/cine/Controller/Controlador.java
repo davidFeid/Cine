@@ -6,9 +6,8 @@ import com.cinema.cine.Entity.Sala;
 import com.cinema.cine.Entity.Usuario;
 import com.cinema.cine.Service.ButacaServiceIMPL.BSIMPL;
 import com.cinema.cine.Service.SalaServiceIMPL.SSIMPL;
-import com.cinema.cine.Service.PersonaServiceIMPL.PSIMPL;
+import com.cinema.cine.Service.PeliculaServiceIMPL.PSIMPL;
 import com.cinema.cine.Service.UusuarioServiceIMPL.USIMPL;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -39,16 +38,16 @@ public class Controlador {
     }
 
     @PostMapping
-    @RequestMapping(value = "CRearPeliculas", method = RequestMethod.POST)
+    @RequestMapping(value = "CrearPeliculas", method = RequestMethod.POST)
     public ResponseEntity<?> CrearPeliculas(@RequestBody Pelicula pelicula){
         Pelicula PeliculaCreada = this.psimpl.CrearPelicula(pelicula);
         return ResponseEntity.status(HttpStatus.CREATED).body(PeliculaCreada);
     }
 
     @PutMapping
-    @RequestMapping(value = "ModificarPelicula", method = RequestMethod.PUT)
-    public ResponseEntity<?> ModificarPelicula(@RequestBody Pelicula pelicula){
-        Pelicula PeliculaModificada = this.psimpl.ModificarPelicula(pelicula);
+    @RequestMapping(value = "ModificarPelicula/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<?> ModificarPelicula(@RequestBody Pelicula pelicula,@PathVariable int id){
+        Pelicula PeliculaModificada = this.psimpl.ModificarPelicula(pelicula,id);
         return ResponseEntity.status(HttpStatus.CREATED).body(PeliculaModificada);
     }
 

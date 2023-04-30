@@ -11,8 +11,9 @@ import java.util.List;
 @Service
 public class BSIMPL implements ButacaService {
 
-    private ButacaRepo repo;
     @Autowired
+    private ButacaRepo repo;
+
     public List<Butaca> ConsultarButaca(){return (List<Butaca>) this.repo.findAll();}
 
     @Override
